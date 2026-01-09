@@ -8,7 +8,7 @@ namespace ECMDomain.Abstraction
 {
     public interface IUnitWork
     {
-        Task CommitAsync(CancellationToken cancellationToken=default,
+        Task<string> CommitAsync(CancellationToken cancellationToken=default,
             bool chekForConcurrency=false);
         IGenericRepostiry<TEntity> Repostiry<TEntity>()
             where TEntity : BaseEntity;

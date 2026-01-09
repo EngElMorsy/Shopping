@@ -1,4 +1,7 @@
 ﻿
+using ECEMInfrastructure.Repositories;
+using ECEMInfrastructure.UnitOfWorks;
+using ECMDomain.Abstraction;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,7 +13,7 @@ namespace ECEMInfrastructure
             this IServiceCollection services,IConfiguration config)
         {
             AddDbConnection(services,config);
-            //AddServicesToContainer(services);
+            AddServicesToContainer(services);
             //AddCaching(services, config);
             return services;
         }
@@ -26,14 +29,14 @@ namespace ECEMInfrastructure
 
         }
 
-        //private static IServiceCollection AddServicesToContainer(this IServiceCollection services)
-        //{
-        //    services.AddScoped(typeof(IGenericRepostiry<>),typeof(GenericRepository<>));
-        //    services.AddScoped<IUnitWork,UnitOfWork>();
-        //    services.AddScoped<IEmailService, EmailService>();
+        private static IServiceCollection AddServicesToContainer(this IServiceCollection services)
+        {
+            services.AddScoped(typeof(IGenericRepostiry<>), typeof(GenericRepository<>));
+            services.AddScoped<IUnitWork, UnitOfWork>();
+            //services.AddScoped<IEmailService, EmailService>();
 
-        //    return services;
-        //}
+            return services;
+        }
 
 
         //private static IServiceCollection AddCaching(

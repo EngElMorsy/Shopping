@@ -3,7 +3,7 @@ using ECMDomain.Abstraction;
 using Microsoft.EntityFrameworkCore;
 namespace ECEMInfrastructure.UnitOfWorks
 {
-    public class UnitOfWork(AppDbContext context) 
+    public class UnitOfWork(AppDbContext context) : IUnitWork
     {
         private readonly AppDbContext _context = context;
 
@@ -29,6 +29,7 @@ namespace ECEMInfrastructure.UnitOfWorks
         public IGenericRepostiry<TEntity> Repostiry<TEntity>() where TEntity : BaseEntity
         => new GenericRepository<TEntity>(_context);
 
+      
     }
     //public class UnitOfWork(AppDbContext context) : IUnitWork
     //{
