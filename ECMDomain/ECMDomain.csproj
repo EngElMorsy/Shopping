@@ -7,8 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
     <Folder Include="Attributes\" />
+    <Folder Include="Entities\InvoiceItems\" />
+    <Folder Include="Entities\Invoices\" />
+    <Folder Include="Entities\Products\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
 
