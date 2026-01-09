@@ -1,0 +1,51 @@
+﻿
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+namespace ECEMInfrastructure
+{
+    public static class ServiceRegister
+    {
+        public static IServiceCollection AddInfrastructureDependencies(
+            this IServiceCollection services,IConfiguration config)
+        {
+            AddDbConnection(services,config);
+            //AddServicesToContainer(services);
+            //AddCaching(services, config);
+            return services;
+        }
+
+        private static IServiceCollection AddDbConnection(
+          this IServiceCollection services, IConfiguration config)
+        {
+            services.AddDbContext<AppDbContext>(opt => {
+                opt.UseSqlServer(config.GetConnectionString("DataBase"));
+            });
+
+            return services;
+
+        }
+
+        //private static IServiceCollection AddServicesToContainer(this IServiceCollection services)
+        //{
+        //    services.AddScoped(typeof(IGenericRepostiry<>),typeof(GenericRepository<>));
+        //    services.AddScoped<IUnitWork,UnitOfWork>();
+        //    services.AddScoped<IEmailService, EmailService>();
+
+        //    return services;
+        //}
+
+
+        //private static IServiceCollection AddCaching(
+        //this IServiceCollection services,
+        // IConfiguration config)
+        //{
+        //    services.AddStackExchangeRedisCache(opt
+        //        => opt.Configuration = config.GetConnectionString("DataBase"));
+
+        //    services.AddSingleton<ICacheService, CacheService>();
+
+        //    return services;
+        //}
+    }
+}

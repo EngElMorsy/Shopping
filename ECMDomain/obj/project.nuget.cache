@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kX5tDFC6LnQ=",
+  "dgSpecHash": "ZQTZ3c3GDfo=",
   "success": true,
   "projectFilePath": "C:\\Users\\omers\\source\\repos\\EconomicEmpowerment\\ECMDomain\\ECMDomain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\omers\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
