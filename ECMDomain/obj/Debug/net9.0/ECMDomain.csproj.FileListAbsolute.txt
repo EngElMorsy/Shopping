@@ -1,0 +1,11 @@
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\bin\Debug\net9.0\ECMDomain.deps.json
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\bin\Debug\net9.0\ECMDomain.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\bin\Debug\net9.0\ECMDomain.pdb
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\obj\Debug\net9.0\ECMDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\obj\Debug\net9.0\ECMDomain.AssemblyInfoInputs.cache
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\obj\Debug\net9.0\ECMDomain.AssemblyInfo.cs
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\obj\Debug\net9.0\ECMDomain.csproj.CoreCompileInputs.cache
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\obj\Debug\net9.0\ECMDomain.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\obj\Debug\net9.0\refint\ECMDomain.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\obj\Debug\net9.0\ECMDomain.pdb
+C:\Users\omers\source\repos\EconomicEmpowerment\ECMDomain\obj\Debug\net9.0\ref\ECMDomain.dll

@@ -58,16 +58,17 @@ namespace ECMDomain.Entities.Employees
             return employee;
         }
 
-        //public void Update(UpdateCustomerDto dto)
-        //{
-        //    Title = new Title(dto.Title);
-        //    Address = new Address(
-        //            dto.FirstLineAddress,
-        //            dto.SecondLineLineAddress,
-        //            dto.Postcode,
-        //            dto.City,
-        //            dto.Country);
-        //}
+        public void update(UpdateEmployeeDto dto)
+        { 
+            Title =new Title(dto.Title);  
+            Address=new Address(
+                dto.FristLineAddress,
+                dto.SecondLineAddress, 
+                dto.Postcode,
+                dto.City, 
+                dto.Country);
+        
+        }
 
         //public void IncreaseBalance(Money invoiceAmount)
         //    => Balance = new Money(
