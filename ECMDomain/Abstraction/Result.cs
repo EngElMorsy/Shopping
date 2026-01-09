@@ -2,8 +2,11 @@
 using System.Text.Json.Serialization;
 
 namespace ECMDomain.Abstraction;
-
-public class Result<TDto> where TDto : BaseEntity
+ 
+//** Befor Use IResult
+//public class Result<TDto> where TDto : BaseEntity
+//** After Use IResult
+public class Result<TDto>
 {
     //Success
     private Result(
@@ -103,6 +106,9 @@ public class Result<TDto> where TDto : BaseEntity
 //    public List<string> ErrorMessages { get; set; } = null!;
 //}
 
-public class NoContentDto;
-//public class NoContentDto : IResult;
+//** Befor Use IResult
+//public class NoContentDto; 
+
+//** After Use IResult
+public class NoContentDto : IResult;
 

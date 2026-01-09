@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECMDomain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b4b1f076075b06b3179fbdb45d4e7edfd83047f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1cafa47b99565d607c5a11c08b23ca70804eb747")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECMDomain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECMDomain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
