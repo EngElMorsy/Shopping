@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "dEv62ZdRvJU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\omers\\source\\repos\\EconomicEmpowerment\\ECEMAPI\\ECEMAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\omers\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.11\\microsoft.aspnetcore.openapi.9.0.11.nupkg.sha512",
+    "C:\\Users\\omers\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\omers\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.22.1\\microsoft.visualstudio.azure.containers.tools.targets.1.22.1.nupkg.sha512"
+  ],
+  "logs": []
+}
