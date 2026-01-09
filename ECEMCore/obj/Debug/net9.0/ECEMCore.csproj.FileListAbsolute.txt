@@ -1,0 +1,11 @@
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\bin\Debug\net9.0\ECEMCore.deps.json
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\bin\Debug\net9.0\ECEMCore.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\bin\Debug\net9.0\ECEMCore.pdb
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\obj\Debug\net9.0\ECEMCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\obj\Debug\net9.0\ECEMCore.AssemblyInfoInputs.cache
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\obj\Debug\net9.0\ECEMCore.AssemblyInfo.cs
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\obj\Debug\net9.0\ECEMCore.csproj.CoreCompileInputs.cache
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\obj\Debug\net9.0\ECEMCore.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\obj\Debug\net9.0\refint\ECEMCore.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\obj\Debug\net9.0\ECEMCore.pdb
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMCore\obj\Debug\net9.0\ref\ECEMCore.dll

@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Attributes\" />
-    <Folder Include="Entities\InvoiceItems\" />
-    <Folder Include="Entities\Invoices\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
 

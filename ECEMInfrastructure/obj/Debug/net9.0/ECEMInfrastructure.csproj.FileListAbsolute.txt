@@ -1,0 +1,11 @@
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\bin\Debug\net9.0\ECEMInfrastructure.deps.json
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\bin\Debug\net9.0\ECEMInfrastructure.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\bin\Debug\net9.0\ECEMInfrastructure.pdb
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\obj\Debug\net9.0\ECEMInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\obj\Debug\net9.0\ECEMInfrastructure.AssemblyInfoInputs.cache
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\obj\Debug\net9.0\ECEMInfrastructure.AssemblyInfo.cs
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\obj\Debug\net9.0\ECEMInfrastructure.csproj.CoreCompileInputs.cache
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\obj\Debug\net9.0\ECEMInfrastructure.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\obj\Debug\net9.0\refint\ECEMInfrastructure.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\obj\Debug\net9.0\ECEMInfrastructure.pdb
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMInfrastructure\obj\Debug\net9.0\ref\ECEMInfrastructure.dll

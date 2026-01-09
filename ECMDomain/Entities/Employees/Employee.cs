@@ -1,6 +1,7 @@
 ﻿using ECMDomain.Abstraction;
 using ECMDomain.Entities.Employees.DTOs;
 using ECMDomain.Entities.Employees.Events;
+using ECMDomain.Entities.Invoicces;
 
 namespace ECMDomain.Entities.Employees
 {
@@ -25,7 +26,7 @@ namespace ECMDomain.Entities.Employees
         public Money Balance { get; private set; } = null!;
 
         // invoice will be locate here. Search_For_Needed
-        //public ICollection<Invoice> Invoices { get; private set; } = null!;
+        public ICollection<Invoice> Invoice { get; private set; } = null!;
         public static Employee Create(CreateEmployeeDto dto)
         {
 
