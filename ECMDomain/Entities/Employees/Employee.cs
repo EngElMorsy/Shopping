@@ -70,7 +70,13 @@ namespace ECMDomain.Entities.Employees
                 dto.Country);
         
         }
-
+        // For Update Balace for customer When add Invoice
+        public void UpdateBalance(Money invoiceAmount)
+        {
+            Balance = new Money(Balance.Value + invoiceAmount.Value);
+        } 
+        
+        
         //public void IncreaseBalance(Money invoiceAmount)
         //    => Balance = new Money(
         //        Balance.Value + invoiceAmount.Value);
