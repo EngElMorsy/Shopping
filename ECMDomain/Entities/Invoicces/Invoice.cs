@@ -51,11 +51,11 @@ namespace ECMDomain.Entities.Invoicces
                       throw new ArgumentNullException($"Product with id: {purchasedProduct.ProductId} not found");
 
                  var invoiceItem = new InvoiceItem(
-                    Guid.NewGuid(), 
-                    new Title(product.Description.Value),
-                    new Money(product.UnitPrice.Value),
-                    //product.Description,
-                    // product.UnitPrice,
+                    Guid.NewGuid(),
+                    //new Title(product.Description.Value),
+                    //new Money(product.UnitPrice.Value),
+                    product.Description,
+                     product.UnitPrice,
                     new Quantity(purchasedProduct.Quantity),
                     invoiceId
                     );
