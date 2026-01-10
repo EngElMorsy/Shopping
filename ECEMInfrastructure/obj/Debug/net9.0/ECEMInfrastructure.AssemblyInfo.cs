@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECEMInfrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1cafa47b99565d607c5a11c08b23ca70804eb747")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c846221536194b73c2f42950f8f5e8a7121b394")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECEMInfrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECEMInfrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

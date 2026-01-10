@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECEMCore.Abstraction.Messaging.Commands
+namespace ECEMCore.Features.Products.Commands.UpdateProduct
 {
     internal class Class1
     {
