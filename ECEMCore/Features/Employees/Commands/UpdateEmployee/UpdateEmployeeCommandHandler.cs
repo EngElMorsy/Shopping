@@ -17,7 +17,7 @@ namespace ECEMCore.Features.Employees.Commands.UpdateEmployee
             .GetIdAsync(request.EmployeeId,cancellationToken); 
 
             if (employee is null)
-                return Result<NoContentDto>
+                return Result<NoContentDto>                               //** request.Dto.Id this if Send ID In DTO
                     .Failed(400, "Null.Error", $"The Employee with The Id :{request.EmployeeId}");
 
             employee.update(request.Dto);
