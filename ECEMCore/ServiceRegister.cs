@@ -18,12 +18,12 @@ namespace ECEMCore
             var applicationAssembly = Assembly.GetExecutingAssembly();
 
             services.AddAutoMapper(applicationAssembly);
-            //services.AddMediatR(Config =>
-            //{ 
-            //    Config.RegisterServicesFromAssembly(applicationAssembly);
-            //    Config.AddOpenBehavior(typeof(LoggingBehavior<,>));
-            //    Config.AddOpenBehavior(typeof(CachingBehaviour<,>));
-            //});
+            services.AddMediatR(Config =>
+            {
+                Config.RegisterServicesFromAssembly(applicationAssembly);
+                //Config.AddOpenBehavior(typeof(LoggingBehavior<,>));
+                //Config.AddOpenBehavior(typeof(CachingBehaviour<,>));
+            });
             return services;
         }
     }

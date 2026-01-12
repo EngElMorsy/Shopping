@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  ecemapi:
+    image: ${DOCKER_REGISTRY-}ecemapi 
+    container_name: ECEM-Api
+    build:
+      context: .
+      dockerfile: ECEMAPI/Dockerfile 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Database=Server=ecem.sql;Database=ShoppingDB;User Id=sa;Password=Happy!Mother;TrustServerCertificate=True;
+    depends_on:
+      - ecem.sql
+    networks:
+      - app-network 
+    ports:
+      - 7293:8081 
+  ecem.sql:
+    image: mcr.microsoft.com/mssql/server:2019-latest 
+    mem_limit: 512m
+    container_name: ECEM-Sql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Happy!Mother
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql 
+    networks:
+      - app-network 
+ 
+volumes:
+  mssql-data:
+    
+networks:
+  app-network:
+    driver: bridge 

@@ -1,5 +1,7 @@
 ﻿
+using ECEMCore.Abstraction.Emailing;
 using ECEMInfrastructure.Repositories;
+using ECEMInfrastructure.Services.Emailling;
 using ECEMInfrastructure.UnitOfWorks;
 using ECMDomain.Abstraction;
 using Microsoft.EntityFrameworkCore;
@@ -32,8 +34,9 @@ namespace ECEMInfrastructure
         private static IServiceCollection AddServicesToContainer(this IServiceCollection services)
         {
             services.AddScoped(typeof(IGenericRepostiry<>), typeof(GenericRepository<>));
-            services.AddScoped<IUnitWork, UnitOfWork>();
-            //services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IUnitWork, UnitOfWork>(); 
+            //** After Docker
+            services.AddScoped<IEmailService, EmailService>();
 
             return services;
         }

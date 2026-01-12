@@ -39,11 +39,16 @@ namespace ECMDomain.Entities.Employees.DTOs
         //public string Country { get; set; } = null!;
     }
     public class CreateEmployeeDto: BaseEmployeeDto;
-    public class UpdateEmployeeDto : BaseEmployeeDto
-    { 
-        public Guid EmployeeId { get; set; }
-    }
-   // public class UpdateEmployeeDto : BaseEmployeeDto;
+
+    //** This Way I Can Update Employee By Take ID From DTO 
+    //**relate To UpdateHAndler  request.Dto.ID
+    //public class UpdateEmployeeDto : BaseEmployeeDto
+    //{ 
+    //    public Guid EmployeeId { get; set; }
+    //}
+    //** This Way I Can Update Employee By Take ID From Request.id 
+    //**relate To UpdateHAndler
+    public class UpdateEmployeeDto : BaseEmployeeDto;
 
  
 
