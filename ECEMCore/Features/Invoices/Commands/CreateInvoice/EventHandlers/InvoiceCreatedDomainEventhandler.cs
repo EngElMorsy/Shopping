@@ -21,8 +21,8 @@ namespace ECEMCore.Features.Invoices.Commands.CreateInvoice.EventHandlers
                 .GetAll()
                 .AsTracking()
                 .Include(x => x.Employee)
-                .FirstOrDefaultAsync(x=>x.Id== notification.invoiceId,cancellationToken);
-            
+                .FirstOrDefaultAsync(x => x.Id == notification.invoiceId, cancellationToken);
+
 
             if (Invoicee is null)
                 return;  //Search  
@@ -30,8 +30,8 @@ namespace ECEMCore.Features.Invoices.Commands.CreateInvoice.EventHandlers
             //for UpdateBalance for employeeOr Customer
             Invoicee.Employee.UpdateBalance(Invoicee.TotalBalance);
 
-             _unitWork.Repostiry<Invoice>().Update(Invoicee);
-            await _unitWork.CommitAsync(cancellationToken); 
+            _unitWork.Repostiry<Invoice>().Update(Invoicee);
+            await _unitWork.CommitAsync(cancellationToken);
 
         }
     }
