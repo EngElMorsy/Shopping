@@ -79,6 +79,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "CreateInvoice",
+    "RelativePath": "api/Invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ECMDomain.Entities.Invoicces.CreateInvoiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "GetAllInvoicetAsync",
+    "RelativePath": "api/Invoice",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "GetInvoiceAsync",
+    "RelativePath": "api/Invoice/{InvoiceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "InvoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "UpdateInvoiceAsync",
+    "RelativePath": "api/Invoice/{InvoiceId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "InvoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "ECMDomain.Entities.Invoicces.UpdateInvoiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "DeleteInvoiceAsync",
+    "RelativePath": "api/Invoice/{InvoiceId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "InvoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ECEMAPI.Controllers.Version1.Product.ProductController",
     "Method": "CreateProduct",
     "RelativePath": "api/Product",
