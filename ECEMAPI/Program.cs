@@ -1,5 +1,6 @@
-using ECEMInfrastructure;
+using ECEMAPI.Extensions;
 using ECEMCore;
+using ECEMInfrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +30,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+//Pipe line of MiddleWare For CustomExceptionHandler
+app.UseCustomExceptionHandler();
 
 app.UseAuthorization();
 

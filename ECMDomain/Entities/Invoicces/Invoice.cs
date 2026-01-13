@@ -3,6 +3,7 @@ using ECMDomain.Entities.Employees;
 using ECMDomain.Entities.InvoiceItems;
 using ECMDomain.Entities.InvoiceItems.ValueObjects;
 using ECMDomain.Entities.Products;
+using ECMDomain.Exceptions;
 
 
 namespace ECMDomain.Entities.Invoicces
@@ -39,7 +40,11 @@ namespace ECMDomain.Entities.Invoicces
         {
 
             if (dto.PurchasedProducts is null || dto.PurchasedProducts.Count == 0)
-                throw new InvalidOperationException("Empty Invoice can not be created");
+                //**BeFore Cutom Expection Type 
+               // throw new InvalidOperationException("Empty Invoice can not be created"); 
+                throw new BadRequestException(["Empty Invoice can not be created"]); 
+
+
             var invoiceId = Guid.NewGuid();
             ICollection<InvoiceItem> PurchasedProducts = [];
 
@@ -48,7 +53,9 @@ namespace ECMDomain.Entities.Invoicces
                 var product = await unitWork
                     .Repostiry<Product>()
                     .GetIdAsync(purchasedProduct.ProductId) ??
-                      throw new ArgumentNullException($"Product with id: {purchasedProduct.ProductId} not found");
+                    //**BeFore Cutom Expection Type
+                    //throw new ArgumentNullException($"Product with id: {purchasedProduct.ProductId} not found");
+                    throw new NullObjectException([$"Product with id: {purchasedProduct.ProductId} not found"]);
 
                  var invoiceItem = new InvoiceItem(
                     Guid.NewGuid(),

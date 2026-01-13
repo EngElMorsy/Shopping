@@ -22,15 +22,14 @@ namespace ECEMCore.Features.Invoices.Commands.UpdateInvoice
 
             Invoicee.Update(request.Dto); 
 
-            _unitWork.Repostiry<Invoice>()
-                .Update(Invoicee); 
+            _unitWork.Repostiry<Invoice>().Update(Invoicee);
+            //**BeFore Cutom Expection Type 
+            //**For ConCurencyException The Operation Must be Set chekForConcurrency true 
+            //await _unitWork.CommitAsync(cancellationToken,chekForConcurrency);
 
-            await _unitWork.CommitAsync(
-             cancellationToken,
-               chekForConcurrency: true);
+            await _unitWork.CommitAsync(cancellationToken,chekForConcurrency: true);
 
-            return Result<NoContentDto>
-                .Success(204);
+            return Result<NoContentDto>.Success(204);
 
 
         }

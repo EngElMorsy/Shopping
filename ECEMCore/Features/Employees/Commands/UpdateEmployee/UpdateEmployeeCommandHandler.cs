@@ -24,7 +24,10 @@ namespace ECEMCore.Features.Employees.Commands.UpdateEmployee
            
             _unitWork.Repostiry<Employee>()
              .Update(employee);
-            await _unitWork.CommitAsync(cancellationToken,chekForConcurrency:true);
+            //**BeFore Cutom Expection Type 
+            //**For ConCurencyException The Operation Must be Set chekForConcurrency true 
+            //await _unitWork.CommitAsync(cancellationToken,chekForConcurrency);
+             await _unitWork.CommitAsync(cancellationToken,chekForConcurrency:true);
 
             return Result<NoContentDto>
                 .Success(204);

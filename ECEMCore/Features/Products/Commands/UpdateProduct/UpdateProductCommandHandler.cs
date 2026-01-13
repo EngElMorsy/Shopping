@@ -21,7 +21,11 @@ namespace ECEMCore.Features.Products.Commands.UpdateProduct
 
                product.Update(request.Dto);
                _unitWork.Repostiry<Product>()
-                .Update(product); 
+                .Update(product);
+
+            //**BeFore Cutom Expection Type 
+            //**For ConCurencyException The Operation Must be Set chekForConcurrency true 
+            //await _unitWork.CommitAsync(cancellationToken,chekForConcurrency);
             await _unitWork.CommitAsync(cancellationToken,chekForConcurrency: true);
 
             return Result<NoContentDto>
