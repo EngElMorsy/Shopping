@@ -39,11 +39,27 @@ namespace ECMDomain.Entities.Invoicces
         public static async Task<Invoice> Create(CreateInvoiceDto dto, IUnitWork unitWork)
         {
 
-            if (dto.PurchasedProducts is null || dto.PurchasedProducts.Count == 0)
-                //**BeFore Cutom Expection Type 
-               // throw new InvalidOperationException("Empty Invoice can not be created"); 
-                throw new BadRequestException(["Empty Invoice can not be created"]); 
+            //if (dto.PurchasedProducts is null || dto.PurchasedProducts.Count == 0)
+            //    //**BeFore Cutom Expection Type 
+            //   // throw new InvalidOperationException("Empty Invoice can not be created"); 
+            //    throw new BadRequestException(["Empty Invoice can not be created"]);
+            #region Cases Add Invoice 
+            if (dto.EmployeeId == Guid.Empty)
+                throw new BadRequestException(
+                    ["Customer Id is required"]);
 
+            if (dto.PurchasedProducts is null || dto.PurchasedProducts.Count == 0)
+                throw new BadRequestException(
+                    ["Empty Invoice can not be created"]);
+
+            if (dto.PurchasedProducts.Any(x => x.ProductId == Guid.Empty))
+                throw new BadRequestException(
+                    ["Product Id(s) is/are missing in your purchased product list"]);
+
+            if (dto.PurchasedProducts.Any(x => x.Quantity <= 0))
+                throw new BadRequestException(
+                    ["Product Quantity must be set and must be positive number in your purchased product list"]);
+            #endregion
 
             var invoiceId = Guid.NewGuid();
             ICollection<InvoiceItem> PurchasedProducts = [];
@@ -54,7 +70,7 @@ namespace ECMDomain.Entities.Invoicces
                     .Repostiry<Product>()
                     .GetIdAsync(purchasedProduct.ProductId) ??
                     //**BeFore Cutom Expection Type
-                    //throw new ArgumentNullException($"Product with id: {purchasedProduct.ProductId} not found");
+                    //throw new ArgumentNullException($"Product with id: {purchasedProduct.ProductId} not found");                  
                     throw new NullObjectException([$"Product with id: {purchasedProduct.ProductId} not found"]);
 
                  var invoiceItem = new InvoiceItem(
@@ -78,21 +94,6 @@ namespace ECMDomain.Entities.Invoicces
             invoice.RaiseDomainEvent(new InvoiceCreatedDomainEvent(invoiceId));
 
             return invoice;
-            //if (dto.EmployeeId == Guid.Empty)
-            //    throw new BadRequestException(
-            //        ["Customer Id is required"]);
-
-            //if (dto.PurchasedProducts is null || dto.PurchasedProducts.Count == 0)
-            //    throw new BadRequestException(
-            //        ["Empty Invoice can not be created"]);
-
-            //if (dto.PurchasedProducts.Any(x => x.ProductId == Guid.Empty))
-            //    throw new BadRequestException(
-            //        ["Product Id(s) is/are missing in your purchased product list"]);
-
-            //if (dto.PurchasedProducts.Any(x => x.Quantity <= 0))
-            //    throw new BadRequestException(
-            //        ["Product Quantity must be set and must be positive number in your purchased product list"]);
 
         }
         public void Update(UpdateInvoiceDto dto)

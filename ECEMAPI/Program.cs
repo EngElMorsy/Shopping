@@ -1,4 +1,5 @@
 using ECEMAPI.Extensions;
+using ECEMAPI.Filters;
 using ECEMCore;
 using ECEMInfrastructure;
 
@@ -11,9 +12,19 @@ builder.Services.AddInfrastructureDependencies(builder.Configuration);
 builder.Services.AddAppllicationServices();
 
 
+//builder.Services.AddControllers();
+// Add Golbal Filters
+builder.Services.AddControllers(opt =>
+{
+    //opt.Filters.Add(new ValidationFilterAttribute());
+    opt.Filters.Add<ValidationFilterAttribute>();
+    // opt.Filters.Add(typeof(ValidationFilterAttribute));
 
+}).ConfigureApiBehaviorOptions(options =>
+{
+    options.SuppressModelStateInvalidFilter = true; // Disable automatic validation
+}); 
 
-builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

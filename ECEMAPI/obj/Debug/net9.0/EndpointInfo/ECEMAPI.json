@@ -384,41 +384,60 @@
   "components": {
     "schemas": {
       "CreateEmployeeDto": {
+        "required": [
+          "city",
+          "country",
+          "fristLineAddress",
+          "postcode",
+          "title"
+        ],
         "type": "object",
         "properties": {
           "title": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 45,
+            "minLength": 1,
+            "type": "string"
           },
           "fristLineAddress": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 40,
+            "minLength": 1,
+            "type": "string"
           },
           "secondLineAddress": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
           "postcode": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 10,
+            "minLength": 1,
+            "type": "string"
           },
           "city": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "country": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
       "CreateInvoiceDto": {
+        "required": [
+          "employeeId",
+          "poNumber",
+          "purchasedProducts"
+        ],
         "type": "object",
         "properties": {
           "poNumber": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 45,
+            "minLength": 1,
+            "type": "string"
           },
           "employeeId": {
             "type": "string",
@@ -428,8 +447,7 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CreateInvoiceItemDto"
-            },
-            "nullable": true
+            }
           }
         },
         "additionalProperties": false
@@ -449,11 +467,16 @@
         "additionalProperties": false
       },
       "CreateProductDto": {
+        "required": [
+          "description",
+          "unitPrice"
+        ],
         "type": "object",
         "properties": {
           "description": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 45,
+            "minLength": 1,
+            "type": "string"
           },
           "unitPrice": {
             "type": "number",
@@ -463,51 +486,73 @@
         "additionalProperties": false
       },
       "UpdateEmployeeDto": {
+        "required": [
+          "city",
+          "country",
+          "fristLineAddress",
+          "postcode",
+          "title"
+        ],
         "type": "object",
         "properties": {
           "title": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 45,
+            "minLength": 1,
+            "type": "string"
           },
           "fristLineAddress": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 40,
+            "minLength": 1,
+            "type": "string"
           },
           "secondLineAddress": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
           "postcode": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 10,
+            "minLength": 1,
+            "type": "string"
           },
           "city": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "country": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
       "UpdateInvoiceDto": {
+        "required": [
+          "poNumber"
+        ],
         "type": "object",
         "properties": {
           "poNumber": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 45,
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
       "UpdateProductDto": {
+        "required": [
+          "description",
+          "unitPrice"
+        ],
         "type": "object",
         "properties": {
           "description": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 45,
+            "minLength": 1,
+            "type": "string"
           },
           "unitPrice": {
             "type": "number",

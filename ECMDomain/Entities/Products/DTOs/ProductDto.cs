@@ -1,13 +1,15 @@
 ﻿
 
+using System.ComponentModel.DataAnnotations;
+
 namespace ECMDomain.Entities.Products.DTOs
 {
     public class BaseProductDto
     {
-        //[Required]
-        //[MaxLength(45)]
+        [Required]
+        [MaxLength(45)]
         public string Description { get; set; } = null!;
-       //[Required]
+       [Required]
         public decimal UnitPrice { get; set; } 
      
 
