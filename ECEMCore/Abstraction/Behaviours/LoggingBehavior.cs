@@ -27,10 +27,10 @@ public class LoggingBehavior<TRequest, TResponse>(
 
             if (result.IsNotSuccessfull)
             {
-                //** Before USe Serilog
+                //** Before USe Middleware Inject Correlation Id Using LogContext With PushProperty
                 //   _logger.LogError("Request {RequestName} processed with error", requestName);
 
-                //** After USe Serilog
+                //** After USe  Middleware Inject Correlation Id Using LogContext With PushProperty
                 using (LogContext.PushProperty("Error", result.Errors!.ErrorMessages, true))
                 {
                     _logger.LogError("Request {RequestName} processed with error", requestName);

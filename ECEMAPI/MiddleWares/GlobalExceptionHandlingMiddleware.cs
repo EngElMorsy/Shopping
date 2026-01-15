@@ -1,5 +1,6 @@
 ﻿using ECMDomain.Abstraction;
 using ECMDomain.Exceptions;
+using Serilog.Context;
 namespace ECEMAPI.MiddleWares;
 public class GlobalExceptionHandlingMiddleware(
     RequestDelegate next,
@@ -16,12 +17,12 @@ public class GlobalExceptionHandlingMiddleware(
         }
         catch (Exception exception) 
         {
-            _logger.LogError(exception, "Exception occured: {Message}", exception.Message);
             var exceptionDetails = GetExceptionDetails(exception);
-            //using (LogContext.PushProperty("Error", exceptionDetails.Errors!.ErrorMessages, true))
-            //{
-               
-            //}
+            //** After USe  Middleware Inject Correlation Id Using LogContext With PushProperty
+            using (LogContext.PushProperty("Error", exceptionDetails.Errors!.ErrorMessages, true))
+            {
+                _logger.LogError(exception, "Exception occured: {Message}", exception.Message);
+            }
             context.Response.StatusCode = exceptionDetails.StatusCode;
 
             await context.Response.WriteAsJsonAsync(exceptionDetails);

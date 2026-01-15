@@ -59,6 +59,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+//Use MiddleWare Of InJectCorrelationId 
+app.UseRequestContextLogging();
 // User Log Serolog 
 app.UseSerilogRequestLogging();
 //Pipe line of MiddleWare For CustomExceptionHandler
