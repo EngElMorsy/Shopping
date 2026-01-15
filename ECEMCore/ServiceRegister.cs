@@ -1,5 +1,6 @@
 ﻿
 
+using ECEMCore.Abstraction.Behaviours;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -21,7 +22,8 @@ namespace ECEMCore
             services.AddMediatR(Config =>
             {
                 Config.RegisterServicesFromAssembly(applicationAssembly);
-                //Config.AddOpenBehavior(typeof(LoggingBehavior<,>));
+               //** For Use IpipeLineBehaviors
+                Config.AddOpenBehavior(typeof(LoggingBehavior<,>));
                 //Config.AddOpenBehavior(typeof(CachingBehaviour<,>));
             });
             return services;

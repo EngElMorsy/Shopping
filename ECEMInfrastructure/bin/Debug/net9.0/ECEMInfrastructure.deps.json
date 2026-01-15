@@ -772,6 +772,14 @@
           }
         }
       },
+      "Serilog/4.3.0": {
+        "runtime": {
+          "lib/net9.0/Serilog.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
+          }
+        }
+      },
       "System.ClientModel/1.0.0": {
         "dependencies": {
           "System.Memory.Data": "1.0.2",
@@ -1033,7 +1041,8 @@
           "AutoMapper": "13.0.1",
           "ECMDomain": "1.0.0",
           "MediatR": "12.4.1",
-          "Microsoft.EntityFrameworkCore": "9.0.2"
+          "Microsoft.EntityFrameworkCore": "9.0.2",
+          "Serilog": "4.3.0"
         },
         "runtime": {
           "ECEMCore.dll": {
@@ -1396,6 +1405,13 @@
       "sha512": "sha512-YqueG52R/Xej4VVbKuRIodjiAhV0HR/XVbLbNrJhCZnzjnSjgMJ/dCdV0akQQxavX6hp/LC6rqLGLcXeQYU7XA==",
       "path": "mono.texttemplating/3.0.0",
       "hashPath": "mono.texttemplating.3.0.0.nupkg.sha512"
+    },
+    "Serilog/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+cDryFR0GRhsGOnZSKwaDzRRl4MupvJ42FhCE4zhQRVanX0Jpg6WuCBk59OVhVDPmab1bB+nRykAnykYELA9qQ==",
+      "path": "serilog/4.3.0",
+      "hashPath": "serilog.4.3.0.nupkg.sha512"
     },
     "System.ClientModel/1.0.0": {
       "type": "package",

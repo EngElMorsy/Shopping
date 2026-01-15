@@ -2,9 +2,27 @@ using ECEMAPI.Extensions;
 using ECEMAPI.Filters;
 using ECEMCore;
 using ECEMInfrastructure;
+using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Log With Seriloh Libarary 
+//log Event On Sytem With your Choice( Apply Configration AppSetting.json) 
+// Consol/ File/ DataBase/ Seq)  
+//Library 
+//-- Serilog.AspNetCore// Read From Configration .Json
+//and Log To file and Log to File With JsonFormatar 
+//-- Serilog.Sinks.MSSqlServer// Read Configration form .Json
+//To Log To SQl DataBase
+//--Serilog.Sinks.Enrirch
+// To enable to rich to Pc Name IP 
+builder.Host.UseSerilog((context, configuration) =>
+configuration.ReadFrom.Configuration(context.Configuration));
+
+
+
+
 
 // Add services to the container.
 // add Services of Dependency Injection
@@ -41,7 +59,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+// User Log Serolog 
+app.UseSerilogRequestLogging();
 //Pipe line of MiddleWare For CustomExceptionHandler
 app.UseCustomExceptionHandler();
 

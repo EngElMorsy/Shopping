@@ -5,8 +5,11 @@ namespace ECMDomain.Abstraction;
  
 //** Befor Use IResult
 //public class Result<TDto> where TDto : BaseEntity
-//** After Use IResult
-public class Result<TDto>
+//** After Use IResult 
+//**and Before Use Ilogger
+//public class Result<TDto> 
+//**After Use Ilogger
+public class Result<TDto> : ILoggable where TDto : IResult
 {
     //Success
     private Result( TDto? data,int statusCode)
