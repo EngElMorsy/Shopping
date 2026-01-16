@@ -24,7 +24,8 @@ namespace ECEMCore
                 Config.RegisterServicesFromAssembly(applicationAssembly);
                //** For Use IpipeLineBehaviors
                 Config.AddOpenBehavior(typeof(LoggingBehavior<,>));
-                //Config.AddOpenBehavior(typeof(CachingBehaviour<,>));
+                //** For Use CacheLogBehaviors
+                Config.AddOpenBehavior(typeof(CachingBehaviour<,>));
             });
             return services;
         }

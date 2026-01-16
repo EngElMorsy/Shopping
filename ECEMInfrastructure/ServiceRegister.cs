@@ -1,6 +1,8 @@
 ﻿
+using ECEMCore.Abstraction.Caching;
 using ECEMCore.Abstraction.Emailing;
 using ECEMInfrastructure.Repositories;
+using ECEMInfrastructure.Services.Caching;
 using ECEMInfrastructure.Services.Emailling;
 using ECEMInfrastructure.UnitOfWorks;
 using ECMDomain.Abstraction;
@@ -16,7 +18,7 @@ namespace ECEMInfrastructure
         {
             AddDbConnection(services,config);
             AddServicesToContainer(services);
-            //AddCaching(services, config);
+            AddCaching(services, config);
             return services;
         }
 
@@ -42,16 +44,16 @@ namespace ECEMInfrastructure
         }
 
 
-        //private static IServiceCollection AddCaching(
-        //this IServiceCollection services,
-        // IConfiguration config)
-        //{
-        //    services.AddStackExchangeRedisCache(opt
-        //        => opt.Configuration = config.GetConnectionString("DataBase"));
+        private static IServiceCollection AddCaching(
+        this IServiceCollection services,
+         IConfiguration config)
+        {
+            services.AddStackExchangeRedisCache(opt
+                => opt.Configuration = config.GetConnectionString("RedisConnection"));
 
-        //    services.AddSingleton<ICacheService, CacheService>();
+            services.AddSingleton<ICacheService, CacheService>();
 
-        //    return services;
-        //}
+            return services;
+        }
     }
 }
