@@ -193,3 +193,7 @@ C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\HealthC
 C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\HealthChecks.SqlServer.dll
 C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\HealthChecks.UI.Client.dll
 C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\HealthChecks.UI.Core.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Asp.Versioning.Abstractions.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Asp.Versioning.Http.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Asp.Versioning.Mvc.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Asp.Versioning.Mvc.ApiExplorer.dll

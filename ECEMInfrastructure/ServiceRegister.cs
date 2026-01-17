@@ -1,4 +1,5 @@
 ﻿
+using Asp.Versioning;
 using ECEMCore.Abstraction.Caching;
 using ECEMCore.Abstraction.Emailing;
 using ECEMInfrastructure.Repositories;
@@ -20,6 +21,7 @@ namespace ECEMInfrastructure
             AddServicesToContainer(services);
             AddCaching(services, config);
             AddHealthChecks(services, config);
+            AddApiVersioning(services);
             return services;
         }
 
@@ -63,6 +65,25 @@ namespace ECEMInfrastructure
             services.AddHealthChecks()
                 .AddSqlServer(config.GetConnectionString("Database")!)
                 .AddRedis(config.GetConnectionString("RedisConnection")!);
+
+            return services;
+        }
+        private static IServiceCollection AddApiVersioning(
+    this IServiceCollection services)
+        {
+            services
+                .AddApiVersioning(opt =>
+                {
+                    opt.DefaultApiVersion = new ApiVersion(1);
+                    opt.ReportApiVersions = true;
+                    opt.ApiVersionReader = new UrlSegmentApiVersionReader();
+                })
+                .AddMvc()
+                .AddApiExplorer(opt =>
+                {
+                    opt.GroupNameFormat = "'v'V";
+                    opt.SubstituteApiVersionInUrl = true;
+                });
 
             return services;
         }

@@ -1,4 +1,5 @@
-﻿ using ECEMCore.Features.Employees.Commands.CreateEmployee;
+﻿using Asp.Versioning;
+using ECEMCore.Features.Employees.Commands.CreateEmployee;
 using ECEMCore.Features.Employees.Commands.RemoveEmployee;
 using ECEMCore.Features.Employees.Commands.UpdateEmployee;
 using ECEMCore.Features.Employees.Queries.GetAllEmployees;
@@ -10,7 +11,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ECEMAPI.Controllers.Version1.Employees
 {
-    [Route("api/[controller]")]
+   // [Route("api/[controller]")] 
+    [ApiVersion(ApiVersions.V1)]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class EmployeeController(ISender sender)
         : BaseController

@@ -1,4 +1,6 @@
 ﻿
+using Asp.Versioning;
+using ECEMAPI.Controllers.Version1.Employees;
 using ECEMCore.Features.Products.Commands.CreateProduct;
 using ECEMCore.Features.Products.Commands.RemoveProduct;
 using ECEMCore.Features.Products.Commands.UpdateProduct;
@@ -11,8 +13,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ECEMAPI.Controllers.Version1.Product
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [ApiVersion(ApiVersions.V1)]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class ProductController(ISender sender) : BaseController
     {
         private readonly ISender _sender = sender;

@@ -1,5 +1,6 @@
 ﻿using AECEMCore.Features.Invoices.Commands.UpdateInvoice;
-
+using Asp.Versioning;
+using ECEMAPI.Controllers.Version1.Employees;
 using ECEMCore.Features.Invoices.Commands.CreateInvoice;
 using ECEMCore.Features.Invoices.Commands.RemoveInvoice;
 using ECEMCore.Features.Invoices.Queries.GetAllInvoice;
@@ -11,8 +12,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ECEMAPI.Controllers.Version1.Invoice
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [ApiVersion(ApiVersions.V2)]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class InvoiceController(ISender sender) : BaseController
     {
         private readonly ISender _sender = sender;
