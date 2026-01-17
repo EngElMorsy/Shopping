@@ -2,6 +2,8 @@ using ECEMAPI.Extensions;
 using ECEMAPI.Filters;
 using ECEMCore;
 using ECEMInfrastructure;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
 
 
@@ -70,5 +72,10 @@ app.UseCustomExceptionHandler();
 app.UseAuthorization();
 
 app.MapControllers();
+//** USE HealthChecks
+app.MapHealthChecks("health-check", new HealthCheckOptions
+{
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
 
 app.Run();

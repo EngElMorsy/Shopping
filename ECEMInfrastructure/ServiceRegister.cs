@@ -19,6 +19,7 @@ namespace ECEMInfrastructure
             AddDbConnection(services,config);
             AddServicesToContainer(services);
             AddCaching(services, config);
+            AddHealthChecks(services, config);
             return services;
         }
 
@@ -52,6 +53,16 @@ namespace ECEMInfrastructure
                 => opt.Configuration = config.GetConnectionString("RedisConnection"));
 
             services.AddSingleton<ICacheService, CacheService>();
+
+            return services;
+        }
+        private static IServiceCollection AddHealthChecks(
+         this IServiceCollection services,
+         IConfiguration config)
+        {
+            services.AddHealthChecks()
+                .AddSqlServer(config.GetConnectionString("Database")!)
+                .AddRedis(config.GetConnectionString("RedisConnection")!);
 
             return services;
         }

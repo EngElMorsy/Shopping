@@ -189,3 +189,7 @@ C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Microso
 C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\StackExchange.Redis.dll
 C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Microsoft.Extensions.Caching.Hybrid.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\HealthChecks.Redis.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\HealthChecks.SqlServer.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\HealthChecks.UI.Client.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\HealthChecks.UI.Core.dll

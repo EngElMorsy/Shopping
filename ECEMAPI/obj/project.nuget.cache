@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zZtnaz7NDbc=",
+  "dgSpecHash": "y7r4b58fJ3w=",
   "success": true,
   "projectFilePath": "C:\\Users\\omers\\source\\repos\\EconomicEmpowerment\\ECEMAPI\\ECEMAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\omers\\.nuget\\packages\\aspnetcore.healthchecks.redis\\9.0.0\\aspnetcore.healthchecks.redis.9.0.0.nupkg.sha512",
+    "C:\\Users\\omers\\.nuget\\packages\\aspnetcore.healthchecks.sqlserver\\9.0.0\\aspnetcore.healthchecks.sqlserver.9.0.0.nupkg.sha512",
+    "C:\\Users\\omers\\.nuget\\packages\\aspnetcore.healthchecks.ui.client\\9.0.0\\aspnetcore.healthchecks.ui.client.9.0.0.nupkg.sha512",
+    "C:\\Users\\omers\\.nuget\\packages\\aspnetcore.healthchecks.ui.core\\9.0.0\\aspnetcore.healthchecks.ui.core.9.0.0.nupkg.sha512",
     "C:\\Users\\omers\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\omers\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\omers\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -41,6 +45,8 @@
     "C:\\Users\\omers\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.3\\microsoft.extensions.dependencyinjection.abstractions.9.0.3.nupkg.sha512",
     "C:\\Users\\omers\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.2\\microsoft.extensions.dependencymodel.9.0.2.nupkg.sha512",
     "C:\\Users\\omers\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\9.0.0\\microsoft.extensions.diagnostics.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\omers\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks\\8.0.11\\microsoft.extensions.diagnostics.healthchecks.8.0.11.nupkg.sha512",
+    "C:\\Users\\omers\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks.abstractions\\8.0.11\\microsoft.extensions.diagnostics.healthchecks.abstractions.8.0.11.nupkg.sha512",
     "C:\\Users\\omers\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\9.0.0\\microsoft.extensions.fileproviders.abstractions.9.0.0.nupkg.sha512",
     "C:\\Users\\omers\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\9.0.0\\microsoft.extensions.hosting.abstractions.9.0.0.nupkg.sha512",
     "C:\\Users\\omers\\.nuget\\packages\\microsoft.extensions.logging\\9.0.2\\microsoft.extensions.logging.9.0.2.nupkg.sha512",
