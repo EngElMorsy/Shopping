@@ -1,5 +1,6 @@
 using ECEMAPI.Extensions;
 using ECEMAPI.Filters;
+using ECEMAPI.OpenApi;
 using ECEMCore;
 using ECEMInfrastructure;
 using HealthChecks.UI.Client;
@@ -48,7 +49,10 @@ builder.Services.AddControllers(opt =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//builder.Services.AddOpenApi();
+//builder.Services.AddOpenApi(); 
+
+//**Swegger 
+builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 
 var app = builder.Build();
 
@@ -57,7 +61,18 @@ if (app.Environment.IsDevelopment())
 {
     // app.MapOpenApi(); 
     app.UseSwagger();
-    app.UseSwaggerUI();
+    //app.UseSwaggerUI(); 
+    app.UseSwaggerUI(options =>
+    {
+        var descriptions = app.DescribeApiVersions();
+
+        foreach (var description in descriptions)
+        {
+            var url = $"/swagger/{description.GroupName}/swagger.json";
+            var name = description.GroupName.ToUpperInvariant();
+            options.SwaggerEndpoint(url, name);
+        }
+    });
 }
 
 app.UseHttpsRedirection();
