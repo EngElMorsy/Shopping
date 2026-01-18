@@ -69,6 +69,10 @@
             "Serilog": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.15.0, )"
             }
           },
           "imports": [
@@ -163,6 +167,10 @@
             "AspNetCore.HealthChecks.UI.Client": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -270,6 +278,10 @@
             "MediatR.Contracts": {
               "target": "Package",
               "version": "[2.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             }
           },
           "imports": [

@@ -51,14 +51,27 @@ public class GlobalExceptionHandlingMiddleware(
             PayloadFormatException payLoadFormatException
             => Result<NoContentDto>.Failed(
                    StatusCodes.Status400BadRequest, payLoadFormatException.Errors),
-            
-           _ => Result<NoContentDto>.Failed(
+
+
+            InvalidTokenException invalidTokenException
+            => Result<NoContentDto>.Failed(
+                   StatusCodes.Status400BadRequest, invalidTokenException.Errors),
+
+            AdminKeyNotMatchException adminKeyNotMatchException
+           => Result<NoContentDto>.Failed(
+                  StatusCodes.Status400BadRequest, adminKeyNotMatchException.Errors),
+           
+            UserAlreadyExistException userAlreadyExistException
+         => Result<NoContentDto>.Failed(
+                StatusCodes.Status400BadRequest, userAlreadyExistException.Errors),
+
+            _ => Result<NoContentDto>.Failed(
                     StatusCodes.Status500InternalServerError,
                    new Error
                     {
                         ErrorCode = "Internal Server Error",
                         ErrorMessages = ["Please see an advise"]
-                    })
+                    }) 
 
             //IBadRequest badRequestException
             //    => Result<NoContentDto>.Failed(
