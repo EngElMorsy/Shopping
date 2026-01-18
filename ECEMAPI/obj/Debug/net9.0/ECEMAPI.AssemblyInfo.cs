@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECEMAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f04bc1000b0743295e77032af805f075e1770ae0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df4167692c28c2cdd75ec47943f3ba46651d1548")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECEMAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECEMAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

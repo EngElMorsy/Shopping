@@ -197,3 +197,4 @@ C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Asp.Ver
 C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Asp.Versioning.Http.dll
 C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Asp.Versioning.Mvc.dll
 C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Asp.Versioning.Mvc.ApiExplorer.dll
+C:\Users\omers\source\repos\EconomicEmpowerment\ECEMAPI\bin\Debug\net9.0\Newtonsoft.Json.dll

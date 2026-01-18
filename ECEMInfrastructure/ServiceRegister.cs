@@ -2,6 +2,7 @@
 using Asp.Versioning;
 using ECEMCore.Abstraction.Caching;
 using ECEMCore.Abstraction.Emailing;
+using ECEMInfrastructure.Outbox;
 using ECEMInfrastructure.Repositories;
 using ECEMInfrastructure.Services.Caching;
 using ECEMInfrastructure.Services.Emailling;
@@ -22,6 +23,7 @@ namespace ECEMInfrastructure
             AddCaching(services, config);
             AddHealthChecks(services, config);
             AddApiVersioning(services);
+            AddBackgroundJobs(services, config);
             return services;
         }
 
@@ -69,7 +71,7 @@ namespace ECEMInfrastructure
             return services;
         }
         private static IServiceCollection AddApiVersioning(
-    this IServiceCollection services)
+         this IServiceCollection services)
         {
             services
                 .AddApiVersioning(opt =>
@@ -87,5 +89,23 @@ namespace ECEMInfrastructure
 
             return services;
         }
+
+        private static IServiceCollection AddBackgroundJobs(
+        this IServiceCollection services,
+        IConfiguration config)
+        {
+            services.Configure<OutboxOptions>(config.GetSection("Outbox"));
+
+            services.AddQuartz();
+
+            services.AddQuartzHostedService(options => options.WaitForJobsToComplete = true);
+
+            services.ConfigureOptions<ProcessOutboxMessagesJobsSetup>();
+
+            return services;
+        }
+
+
+
     }
 }
