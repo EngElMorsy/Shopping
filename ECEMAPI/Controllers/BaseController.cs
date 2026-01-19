@@ -1,8 +1,8 @@
 ﻿using Azure;
+using ECMDomain.Abstraction;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using  Abstraction =ECMDomain.Abstraction;
-
+using Abstraction = ECMDomain.Abstraction;
 namespace ECEMAPI.Controllers;
 
     
@@ -10,7 +10,8 @@ namespace ECEMAPI.Controllers;
     public class BaseController : ControllerBase
     {
         public IActionResult CreateResult<TDto>(Abstraction.Result<TDto> result)
-            where TDto : Abstraction.IResult => result.StatusCode == 204
+            where TDto : Abstraction.IResult
+            => result.StatusCode == 204
             ? new ObjectResult(null) { StatusCode = 204 }
             : new ObjectResult(result) {StatusCode=result.StatusCode };
        

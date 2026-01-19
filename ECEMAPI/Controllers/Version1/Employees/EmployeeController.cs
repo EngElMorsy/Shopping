@@ -6,12 +6,14 @@ using ECEMCore.Features.Employees.Queries.GetAllEmployees;
 using ECEMCore.Features.Employees.Queries.GetEmployee;
 using ECMDomain.Entities.Employees.DTOs;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECEMAPI.Controllers.Version1.Employees
 {
-   // [Route("api/[controller]")] 
+    // [Route("api/[controller]")] 
+    [Authorize]
     [ApiVersion(ApiVersions.V1)]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]

@@ -1,5 +1,85 @@
 [
   {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Authentication.AuthController",
+    "Method": "LoginUserAsync",
+    "RelativePath": "api/v1/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ECMDomain.Entities.Identity.Users.DTOs.LoginUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Authentication.AuthController",
+    "Method": "GetAccessTokenByRefreshTokenAsync",
+    "RelativePath": "api/v1/Auth/RefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ECMDomain.Entities.Identity.Users.DTOs.RefreshTokenDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Authentication.AuthController",
+    "Method": "RegisterUserAsync",
+    "RelativePath": "api/v1/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ECMDomain.Entities.Identity.Users.DTOs.RegisterUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Authentication.AuthController",
+    "Method": "RevokeAllAsync",
+    "RelativePath": "api/v1/Auth/RevokeAll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ECMDomain.Entities.Identity.Users.DTOs.RevokeAllUsersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Authentication.AuthController",
+    "Method": "RevokeUserAsync",
+    "RelativePath": "api/v1/Auth/RevokeUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ECMDomain.Entities.Identity.Users.DTOs.RevokeUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ECEMAPI.Controllers.Version1.Employees.EmployeeController",
     "Method": "CreateEmployee",
     "RelativePath": "api/v1/Employee",
@@ -79,6 +159,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "CreateInvoice",
+    "RelativePath": "api/v1/Invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ECMDomain.Entities.Invoicces.CreateInvoiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "GetAllInvoicetAsync",
+    "RelativePath": "api/v1/Invoice",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "GetInvoiceAsync",
+    "RelativePath": "api/v1/Invoice/{InvoiceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "InvoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "UpdateInvoiceAsync",
+    "RelativePath": "api/v1/Invoice/{InvoiceId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "InvoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "ECMDomain.Entities.Invoicces.UpdateInvoiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
+    "Method": "DeleteInvoiceAsync",
+    "RelativePath": "api/v1/Invoice/{InvoiceId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "InvoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ECEMAPI.Controllers.Version1.Product.ProductController",
     "Method": "CreateProduct",
     "RelativePath": "api/v1/Product",
@@ -151,85 +310,6 @@
     "Parameters": [
       {
         "Name": "ProductId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
-    "Method": "CreateInvoice",
-    "RelativePath": "api/v2/Invoice",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ECMDomain.Entities.Invoicces.CreateInvoiceDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
-    "Method": "GetAllInvoicetAsync",
-    "RelativePath": "api/v2/Invoice",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
-    "Method": "GetInvoiceAsync",
-    "RelativePath": "api/v2/Invoice/{InvoiceId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "InvoiceId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
-    "Method": "UpdateInvoiceAsync",
-    "RelativePath": "api/v2/Invoice/{InvoiceId}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "InvoiceId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "request",
-        "Type": "ECMDomain.Entities.Invoicces.UpdateInvoiceDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ECEMAPI.Controllers.Version1.Invoice.InvoiceController",
-    "Method": "DeleteInvoiceAsync",
-    "RelativePath": "api/v2/Invoice/{InvoiceId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "InvoiceId",
         "Type": "System.Guid",
         "IsRequired": true
       }

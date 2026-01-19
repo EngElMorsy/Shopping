@@ -7,12 +7,14 @@ using ECEMCore.Features.Invoices.Queries.GetAllInvoice;
 using ECEMCore.Features.Invoices.Queries.GetInvoice;
 using ECMDomain.Entities.Invoicces;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECEMAPI.Controllers.Version1.Invoice
 {
-    [ApiVersion(ApiVersions.V2)]
+    [Authorize]
+    [ApiVersion(ApiVersions.V1)]
     [Route("api/v{version:apiVersion}/[controller]")]
     public class InvoiceController(ISender sender) : BaseController
     {

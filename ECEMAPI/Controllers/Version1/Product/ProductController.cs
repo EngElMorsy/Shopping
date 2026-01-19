@@ -8,11 +8,13 @@ using ECEMCore.Features.Products.Queries.GetAllProducts;
 using ECEMCore.Features.Products.Queries.GetProduct;
 using ECMDomain.Entities.Products.DTOs;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECEMAPI.Controllers.Version1.Product
 {
+    [Authorize]
     [ApiVersion(ApiVersions.V1)]
     [Route("api/v{version:apiVersion}/[controller]")]
     public class ProductController(ISender sender) : BaseController
